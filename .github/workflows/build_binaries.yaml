@@ -8,6 +8,11 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure Git safe directory
+        run: git config --global --add safe.directory '*'
+      - uses: actions/checkout@v4
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
       qmk_repo: bastardkb/bastardkb-qmk
