@@ -62,6 +62,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define SEL_ALL LCTL(KC_A)
 #define CSESC LCTL(LSFT(KC_ESC))
 #define CADEL LCTL(LALT(KC_DEL))
+#define PRINT LCTL(KC_P)
 #define LOCK LGUI(KC_L)
 
 // clang-format off
@@ -134,8 +135,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_NO,    KC_NO,     KC_NO,   KC_NO,   KC_NO,  KC_NO,    KC_F16,   KC_F1,   KC_F2,   KC_F3,  KC_F10,  KC_F13,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-           TO(LAYER_CURSOR),TO(LAYER_NUMBER),TO(LAYER_GAME),    TO(LAYER_VIM),TO(LAYER_BASE)
-  //     ╰──────────────────────────────────────────────────╯ ╰──────────────────────────────╯
+           TO(LAYER_CURSOR),TO(LAYER_NUMBER),TO(LAYER_GAME),    TO(LAYER_BASE), KC_NO
+  //     ╰──────────────────────────────────────────────────╯ ╰───────────────────────╯
   ),
 
   [LAYER_POINTER] = LAYOUT(
@@ -146,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  MS_BT, MS_BTN1, MS_BTN3,    MS_BTN3, MS_BTN1
+                                  MS_BTN2, MS_BTN1, MS_BTN3,    MS_BTN3, MS_BTN1
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
