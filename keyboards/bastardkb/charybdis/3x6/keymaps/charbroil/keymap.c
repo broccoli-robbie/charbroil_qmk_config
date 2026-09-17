@@ -153,14 +153,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-// Hold-Tap Tuning
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    if (IS_QK_MOD_TAP(keycode)) {
-        return 280;
-    }
-    return TAPPING_TERM;
-}
+// Hold-Tap
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//    if (IS_QK_MOD_TAP(keycode)) {
+//        return 280;
+//    }
+//    return TAPPING_TERM;
+//}
 
+// Quick Tap Term
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     if (IS_QK_MOD_TAP(keycode)) {
         return 175;
@@ -168,10 +169,12 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     return 0;
 }
 
+// Permissive Hold
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     return IS_QK_MOD_TAP(keycode);
 }
 
+// Hold On Other Key Press
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     return IS_QK_LAYER_TAP(keycode);
 }
