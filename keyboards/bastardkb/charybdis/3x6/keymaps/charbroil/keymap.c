@@ -75,8 +75,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
      LSFT(KC_TAB), Z_PTR,   KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM, KC_DOT,SLSH_PTR,KC_BSLS,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                 DEL_CUR, BSPC_NUM, KC_LSFT,     KC_SPC,    RET_SYM
-  //                           ╰────────────────────────────╯ ╰──────────────────────╯
+                                 DEL_CUR, BSPC_NUM, KC_LSFT,     RET_SYM, KC_SPC
+  //                           ╰────────────────────────────╯ ╰───────────────────╯
   ),
 
   [LAYER_NUMBER] = LAYOUT(
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  MS_BTN2, MS_BTN1, MS_BTN3,    MS_BTN3, MS_BTN1
+                                  MS_BTN2, MS_BTN1, MS_BTN3,    MS_BTN3, MS_BTN2
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
