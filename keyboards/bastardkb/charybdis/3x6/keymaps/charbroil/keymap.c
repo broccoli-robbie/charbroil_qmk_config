@@ -153,14 +153,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-// Hold-Tap
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    if (IS_QK_MOD_TAP(keycode)) {
-        return TAPPING_TERM + 80;
-    }
-    return TAPPING_TERM;
-}
-
 // Quick Tap Term
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     if (IS_QK_MOD_TAP(keycode)) {
@@ -174,12 +166,5 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     return IS_QK_MOD_TAP(keycode);
 }
 
-// Hold On Other Key Press
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    return IS_QK_LAYER_TAP(keycode);
-}
-
 // Chordal Hold
-#ifdef CHORDAL_HOLD
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT('L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', 'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', '*', '*', '*', '*', '*');
-#endif
