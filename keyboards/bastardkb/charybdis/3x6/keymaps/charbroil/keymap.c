@@ -153,14 +153,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-// Quick Tap Term
-uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
-    if (IS_QK_MOD_TAP(keycode)) {
-        return QUICK_TAP_TERM + 175;
-    }
-    return QUICK_TAP_TERM;
-}
-
 // Permissive Hold
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     return IS_QK_MOD_TAP(keycode);
