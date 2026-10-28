@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_TAB,     HRM_A,   HRM_S,   HRM_D,   HRM_F,   KC_G,     KC_H,    HRM_J,   HRM_K,   HRM_L, HRM_SCLN,KC_QUOT,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-     LSFT(KC_TAB), Z_PTR,   KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM, KC_DOT,SLSH_PTR,KC_BSLS,
+     LSFT(KC_TAB), KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM, KC_DOT,SLSH_PTR,KC_BSLS,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                  DEL_CUR, BSPC_NUM, KC_LSFT,     RET_SYM, KC_SPC
   //                           ╰────────────────────────────╯ ╰───────────────────╯
@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
       _______,  KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, COPY,       KC_LEFT,  KC_DOWN, KC_UP,   KC_RGHT, PRINT,   KC_NUM,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-      _______,  KC_MSTP, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,    XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, SEL_ALL, KC_SCRL,
+      _______,  SNIPING, DRGSCRL, MS_BTN2, MS_BTN1, PSTE,       XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, SEL_ALL, KC_SCRL,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                            TO(LAYER_BASE), KC_MUTE, KC_MPLY,    TO(LAYER_BASE), _______
   //                     ╰──────────────────────────────────╯ ╰─────────────────────────╯
