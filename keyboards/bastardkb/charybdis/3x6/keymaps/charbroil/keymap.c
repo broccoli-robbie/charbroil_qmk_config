@@ -11,11 +11,10 @@ enum charybdis_keymap_layers {
     LAYER_CURSOR,
     LAYER_GAME,
     LAYER_SYSTEM,
-    LAYER_POINTER,
 };
 
 /** \brief Automatically enable sniping-mode on the pointer layer. */
-#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
+#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_CURSOR
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 static uint16_t auto_pointer_layer_timer = 0;
@@ -35,7 +34,6 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define RET_SYM LT(LAYER_SYMBOL, KC_ENT)
 #define ESC_NUM LT(LAYER_NUMBER, KC_ESC)
 #define MINS_SYS LT(LAYER_SYSTEM, KC_MINS)
-#define Z_PTR LT(LAYER_POINTER, KC_Z)
 #define SLSH_PTR LT(LAYER_POINTER, KC_SLSH)
 
 // Homerow Mods
@@ -111,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
       _______,  SNIPING, DRGSCRL, MS_BTN2, MS_BTN1, PSTE,       XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, SEL_ALL, KC_SCRL,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                           TO(LAYER_BASE), KC_MUTE, KC_MPLY,    TO(LAYER_BASE), _______
+                           TO(LAYER_BASE), DPI_MOD, S_D_MOD,    TO(LAYER_BASE), KC_MPLY
   //                     ╰──────────────────────────────────╯ ╰─────────────────────────╯
   ),
 
@@ -137,18 +135,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
            TO(LAYER_CURSOR),TO(LAYER_NUMBER),TO(LAYER_GAME),    TO(LAYER_BASE), XXXXXXX
   //     ╰──────────────────────────────────────────────────╯ ╰─────────────────────────╯
-  ),
-
-  [LAYER_POINTER] = LAYOUT(
-  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,    XXXXXXX, KC_RGUI, KC_RALT, KC_RCTL, KC_RSFT, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, _______, DRGSCRL, SNIPING, MS_BTN1, MS_BTN2,    MS_BTN1, MS_BTN2, SNIPING, DRGSCRL, _______, XXXXXXX,
-  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  MS_BTN1, MS_BTN3, MS_BTN2,    MS_BTN1, MS_BTN2
-  //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
 // clang-format on
